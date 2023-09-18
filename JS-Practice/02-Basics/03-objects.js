@@ -1,4 +1,4 @@
-// object literals
+// object literals Part-1
 const mySymbol = Symbol("key");
 const user ={
     firstName : "zaid ",

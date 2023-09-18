@@ -1,3 +1,4 @@
+//Arrays Part-1
 const myArr = [1, 3, 4, 56, 5];
 console.log(myArr[2]);  //gives the element at particular index , remember index starts from zero
 

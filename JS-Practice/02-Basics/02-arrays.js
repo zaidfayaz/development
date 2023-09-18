@@ -1,3 +1,5 @@
+//Arrays Part-2
+
 const friends = ["Suhaib", "Kaiser", "Faizan", "Raqib"]
 const family = ["Haseeb", "Iqtida", "Hanan"];
 
