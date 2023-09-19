@@ -40,3 +40,17 @@ console.log(Object.values(obj3));
 console.log(Object.entries(obj3));
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+//De structuring 
+const course = {
+    courseName : " JavaScript Fundamentals",
+    price : 1999,
+    courseInstructor : " Zaid Fayaz"
+}
+console.log(course.courseInstructor);
+
+const  {courseInstructor} = course //de structuring means we dont have to  use dot operator again and again when we need to console the output we can use the name given in the curlybraces and directly log to console
+console.log(courseInstructor); 
+
+const  {courseInstructor : instructor} = course //if  we want to give property name aa we want then we can write as mentioned in this line of code
+console.log(instructor);
