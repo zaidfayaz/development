@@ -54,3 +54,17 @@ console.log(courseInstructor);
 
 const  {courseInstructor : instructor} = course //if  we want to give property name aa we want then we can write as mentioned in this line of code
 console.log(instructor);
+
+//JSon talk 
+json object
+{
+    "name" : "Zaid Fayaz",
+    "course" : "javaScripe",
+    "price" : "free"
+}
+// json array
+// [
+//     {},
+//     {},
+//     {}
+// ]
