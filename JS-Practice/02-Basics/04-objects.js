@@ -56,12 +56,12 @@ const  {courseInstructor : instructor} = course //if  we want to give property n
 console.log(instructor);
 
 //JSon talk 
-json object
-{
-    "name" : "Zaid Fayaz",
-    "course" : "javaScripe",
-    "price" : "free"
-}
+// json object
+// {
+//     "name" : "Zaid Fayaz",
+//     "course" : "javaScripe",
+//     "price" : "free"
+// }
 // json array
 // [
 //     {},
