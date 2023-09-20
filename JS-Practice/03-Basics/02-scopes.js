@@ -1,4 +1,4 @@
-var c =10; //globsl scope
+var c =10; //global scope
  
 if (true){
     let a = 10; //block scope and can be used only in this scope..outside it cant be accessed
@@ -10,3 +10,4 @@ let a = 13;
 const b = 25;
 var c // here c = 10 as declared above (by hoisting)
 console.log("outer :" + a, b, c);
+console.log("hello");
