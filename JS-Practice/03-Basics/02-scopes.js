@@ -44,7 +44,7 @@ function add1( num){
 }
 
 //function expression
-console.log(add2(8));  //will provide error 
+// console.log(add2(8));  //will provide error 
 
 const add2 = function(num){
     return num + 1;
