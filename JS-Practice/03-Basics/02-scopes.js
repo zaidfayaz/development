@@ -10,4 +10,44 @@ let a = 13;
 const b = 25;
 var c // here c = 10 as declared above (by hoisting)
 console.log("outer :" + a, b, c);
-console.log("hello");
+
+//nested scope
+function one(){
+    const userName ="Zaid Fayaz";
+
+    function two(){
+        const website = "Google";
+        console.log(`calling outer function variable: ${userName}`);  //varaibles of parent function can be accessed
+    }
+   // console.log(`calling inner fuction two  variable : ${website}`); //it will show error coz its out from its outside from its scope
+    two()
+}
+one()
+
+//********************************exampple 2 *************************************** */
+if (true){
+    const userName =" Zaid Fayaz";
+    if (userName === " Zaid Fayaz"){
+        const website = " Google";
+        console.log(userName + website);
+    }
+   // console.log(website); //eroor: accessed outside its scope
+}
+// console.log(userName) //error : accessed outside its scope
+
+//************************** function hoisiting ******************************************
+
+console.log(add1(6));
+
+function add1( num){
+    return num + 1;
+}
+
+//function expression
+console.log(add2(8));  //will provide error 
+
+const add2 = function(num){
+    return num + 1;
+}
+
+
