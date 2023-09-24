@@ -20,13 +20,15 @@ if (Object.keys(emptyObject).length === 0){
     console.log("I am empty object"); 
 }
  //Nullish coalescing operator(??) : Null , Undefined
-  let val1;
-  val1 = 5 ?? 15;
-  let val2 = null ?? 15;
-  let val3 = undefined ?? 90;
-  console.log(val1, val2, val3);
+//   let val1;
+//   val1 = 5 ?? 15;
+//   let val2 = null ?? 15;
+//   let val3 = undefined ?? 90;
+//   console.log(val1, val2, val3);
  
 
 //Terinary operator
 const teaPrice = 100;
 teaPrice <= 100 ? console.log(`Tea price : ${teaPrice}`) : console.log("Tea price not valid");
+
+console.log("hello");
