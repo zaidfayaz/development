@@ -32,3 +32,4 @@ const teaPrice = 100;
 teaPrice <= 100 ? console.log(`Tea price : ${teaPrice}`) : console.log("Tea price not valid");
 
 console.log("hello");
+console.log("helllo zaid")
