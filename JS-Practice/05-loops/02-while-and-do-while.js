@@ -20,3 +20,4 @@ do {
     score++
 } while (score <= 10);
 console.log('hello');
+console.log('world');
