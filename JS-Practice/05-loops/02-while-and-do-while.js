@@ -21,3 +21,4 @@ do {
 } while (score <= 10);
 console.log('hello');
 console.log('world');
+console.log('zaid');
