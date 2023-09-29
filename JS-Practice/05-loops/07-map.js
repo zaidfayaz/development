@@ -15,3 +15,5 @@ const chaining = myNum.map( (num) => num * 10).map( (num) => num + 1 ).filter( (
 console.log(chaining);
 
 console.log("hello");
+console.log("Zaid");
+console.log("zasd");
