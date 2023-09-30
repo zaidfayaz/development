@@ -26,5 +26,5 @@ const shoppingCart = [
     },
 ]
 
-const retruSum = shoppingCart.reduce( (acc, item) => acc + item.price, 0)
-console.log(retruSum);
+const returnSum = shoppingCart.reduce( (acc, item) => acc + item.price, 0)
+console.log(returnSum);
