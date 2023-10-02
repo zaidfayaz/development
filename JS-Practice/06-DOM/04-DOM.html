@@ -1,0 +1,47 @@
+<!-- Edit and Remove in DOM -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script> 
+//normal funcion in which the element traverse through out the tree
+    function addLanguage(langName){
+       const li = document.createElement("li");
+       li.innerHTML = `${langName}`;
+       document.querySelector(".language").appendChild(li);
+    }
+    addLanguage("Python")
+    addLanguage("Java")
+
+    //optimized way 
+    function addOptiLanguage(languageName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(languageName));
+        document.querySelector(".language").appendChild(li)
+    }
+    addOptiLanguage("C++")
+
+    //edit
+    const edit = document.querySelector("li:nth-child(2)");
+    const newLi = document.createElement("li");
+    newLi.textContent = "Ruby";
+    edit.replaceWith(newLi)
+
+
+   //edit example 2
+   const edit2 = document.querySelector("li:first-child");
+   edit2.outerHTML = "<li> Spring Boot </li>"
+
+   //remove
+   const deleteLast =document.querySelector("li:last-child");
+   deleteLast.remove();
+</script>
+</html>
