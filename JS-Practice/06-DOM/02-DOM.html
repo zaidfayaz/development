@@ -28,5 +28,10 @@
     console.log(parent.firstElementChild); //gives first element child
     console.log(parent.lastElementChild);  //gives last element child
 
+    const dayOne = document.querySelector(".day");
+    console.log(dayOne.parentElement);  //acces to parent elemnt from child element
+    console.log(dayOne.nextElementSibling); //access to next element
+    console.log("NODES :", parent.childNodes)  //here it will be 9 nodes not 4 that were monday tuesday etc...it will give the complete tree structre
+
 </script>
 </html>
