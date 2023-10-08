@@ -5,6 +5,7 @@ buttons.forEach((button) => {
     button.addEventListener('click', function(e){
         console.log(e);
         console.log(e.target);
+        console.log("HELLO");
 
     })
 
