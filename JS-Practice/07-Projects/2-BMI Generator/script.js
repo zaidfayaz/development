@@ -20,5 +20,4 @@ form.addEventListener('submit', (e) => {
             results.innerHTML = `<span>${bmi} is  over weight</span>`;
         }
     }
-    console.log();
 }); 
