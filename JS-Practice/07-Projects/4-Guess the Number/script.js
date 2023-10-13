@@ -85,5 +85,6 @@ function newGame(){
     userInput.removeAttribute('disabled');
     startOver.removeChild('p');
     playGame = true
+    console.log();
  });
 }
