@@ -1,4 +1,4 @@
-const RandomNumber = parseInt(Math.random() * 100 + 1);
+let  RandomNumber = parseInt(Math.random() * 100 + 1);
 const submit = document.querySelector('#subt');
 const userInput = document.querySelector('#guessField');
 const PreviousGuess = document.querySelector('.guesses');
@@ -18,8 +18,9 @@ if (playGame){
        //  console.log(guess);
         validateGuess(guess)
     });
+}
 
-function validateGuess(){
+function validateGuess(guess){
     if(isNaN(guess)){
         alert('please enter a valid number');
     }else if (guess < 1 ){
@@ -31,10 +32,10 @@ function validateGuess(){
         if (numGuess === 11){
             displayGuess(guess);
             displayMessage(`Game Over. Random number was ${RandomNumber}`);
-            endgGame();
+            endGame();
         }else{
             displayGuess(guess);
-            checkGuess(guess)
+            checkGuess(guess);
         }
     }
 }
@@ -42,7 +43,7 @@ function validateGuess(){
 function checkGuess(guess){
     if (guess === RandomNumber){
         displayMessage('Guess Correct');
-        endgGame();
+        endGame();
     }else if (guess < RandomNumber){
         displayMessage('Number is too Low');
     }else if (guess > RandomNumber){
@@ -52,22 +53,37 @@ function checkGuess(guess){
     //clean up method 
 function displayGuess(guess){  
     userInput.value = '';
-    PreviousGuess.innerHTML += `${guess}`;
+    PreviousGuess.innerHTML += `${guess} , `;
     numGuess ++;
     remainingGuess.innerHTML = `${11 - numGuess}`
 }
 
 
 function displayMessage(message){
-    lowOrHi.innerHTML = `<h2> ${message}</h2>`
-
+    lowOrHi.innerHTML = `<h2>${message}</h2>`;
 }
 
-function endgGame(){
+function endGame(){
+    userInput.value = "";
+    userInput.setAttribute('disabled', '');
+    p.classList.add('button');
+    p.innerHTML = `<h2 id ="newGame">Start New game </h2>`
+    startOver.appendChild(p);
+    playGame = false;
+    newGame();
 
 }
 
 function newGame(){
-
-}
+ const newGame = document.querySelector('#newGame')
+ newGame.addEventListener('click', (e) => {
+    RandomNumber = parseInt(Math.random() * 100 + 1);
+    prevGuess =[];
+    numGuess =1;
+    prevGuess.innerHTML = '';
+    remainingGuess.innerHTML = `${11 - numGuess}`;
+    userInput.removeAttribute('disabled');
+    startOver.removeChild('p');
+    playGame = true
+ });
 }
