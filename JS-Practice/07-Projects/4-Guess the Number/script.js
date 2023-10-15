@@ -15,7 +15,6 @@ if (playGame){
     submit.addEventListener('click', (e) => {
         e.preventDefault();
         const guess = parseInt(userInput.value);
-        
        //  console.log(guess);
         validateGuess(guess)
     });
@@ -36,10 +35,8 @@ function validateGuess(guess){
             displayMessage(`Game Over. Random number was ${RandomNumber}`);
             endGame();
         }else{
-            
             checkGuess(guess);
             displayGuess(guess);
-            
         }
     }
 }
@@ -83,7 +80,6 @@ function endGame(){
     startOver.appendChild(p);
     playGame = false;
     newGame();
-
 }
 
 function newGame(){
