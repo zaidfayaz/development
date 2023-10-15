@@ -3,7 +3,7 @@ const submit = document.querySelector('#subt');
 const userInput = document.querySelector('#guessField');
 const PreviousGuess = document.querySelector('.guesses');
 const remainingGuess = document.querySelector('.lastResult');
-const lowOrHi = document.querySelector('.lowOrhi')
+const lowOrHi = document.querySelector('.lowOrHi')
 const startOver = document.querySelector('.resultParas');
 
 const p = document.createElement('p')
@@ -15,12 +15,14 @@ if (playGame){
     submit.addEventListener('click', (e) => {
         e.preventDefault();
         const guess = parseInt(userInput.value);
+        
        //  console.log(guess);
         validateGuess(guess)
     });
 }
 
 function validateGuess(guess){
+    console.log(guess)
     if(isNaN(guess)){
         alert('please enter a valid number');
     }else if (guess < 1 ){
@@ -34,13 +36,17 @@ function validateGuess(guess){
             displayMessage(`Game Over. Random number was ${RandomNumber}`);
             endGame();
         }else{
-            displayGuess(guess);
+            
             checkGuess(guess);
+            displayGuess(guess);
+            
         }
     }
 }
 
 function checkGuess(guess){
+    console.log(typeof guess)
+    console.log(`the randno is ${RandomNumber}`)
     if (guess === RandomNumber){
         displayMessage('Guess Correct');
         endGame();
@@ -56,11 +62,17 @@ function displayGuess(guess){
     PreviousGuess.innerHTML += `${guess} , `;
     numGuess ++;
     remainingGuess.innerHTML = `${11 - numGuess}`
+    console.log(remainingGuess.innerHTML)
+    if(remainingGuess.innerHTML<1){
+        endGame();
+    }
 }
 
 
 function displayMessage(message){
+    console.log(lowOrHi.innerHTML);
     lowOrHi.innerHTML = `<h2>${message}</h2>`;
+
 }
 
 function endGame(){
