@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <h1>Async</h1>
+    <h1>Async Js</h1>
+    <button id="start">Start</button>
     <button id="stop">Stop </button>
 </body>
 <script>
-    setTimeout(function(){
-        console.log('Zaid Fayaz');
-        },3000)
-    
-    const changeText = function(){
-        document.querySelector('h1').innerHTML = "Asynchronous JavaScript"
+    let stopInterval1;
+
+    //startt interval
+    const startInterval = function (str) {
+        stopInterval1 = setInterval(test, 1000, 'Zaid')
+        function test(str) {
+            console.log(str, Date.now());
+        }
     }
-    const stop = setTimeout(changeText,3000)
+    document.querySelector('#start').addEventListener('click', startInterval)
 
-    //stoppng time setInterval
-    document.querySelector("#stop").addEventListener('click',function(){
-        clearTimeout(stop);
-    })
-    
-
-
+    //stop interval
+    const stopInterval = function () {
+        clearInterval(stopInterval1)
+    }
+    document.querySelector('#stop').addEventListener('click', stopInterval)
 </script>
+
 </html>
