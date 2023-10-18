@@ -12,7 +12,7 @@
     const requestUrl = 'https://api.github.com/users/zaidfayaz'
     const xhr = new XMLHttpRequest();
     xhr.open('GET', requestUrl);
-    //comtinuosly monitoring the state of api
+    //continuosly monitoring the state of api
     xhr.onreadystatechange = function(){
         console.log(xhr.readyState);
         if(xhr.readyState === 4){
