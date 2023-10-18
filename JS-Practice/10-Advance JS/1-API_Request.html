@@ -11,6 +11,17 @@
 <script>
     const requestUrl = 'https://api.github.com/users/zaidfayaz'
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', requestUrl)
+    xhr.open('GET', requestUrl);
+    //comtinuosly monitoring the state of api
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText) //converts string into  JSON (here data is in string form so we need to convert that into json format )
+            console.log(  data);  //the data of api wll be here
+            console.log( typeof data); 
+             console.log(data.id);
+        }
+    }
+    xhr.send()
 </script>
 </html>
