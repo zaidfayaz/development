@@ -79,3 +79,4 @@ getAllUsers()
 fetch('https://api.github.com/users/zaidfayaz').then((response) => {
     return response.json()
 }).then((data) => console.log(data)).catch((error) => console.log(error));
+console.log("completed");
