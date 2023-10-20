@@ -75,7 +75,7 @@ async function getAllUsers() {
 }
 getAllUsers()
 
-//Above  approac by thenable
+//Above  approach by thenable
 fetch('https://api.github.com/users/zaidfayaz').then((response) => {
     return response.json()
 }).then((data) => console.log(data)).catch((error) => console.log(error));
