@@ -19,4 +19,3 @@ console.log(Object.getOwnPropertyDescriptor(course, "name"));
 
 course.name = "C"
 console.log(course);
-loo
