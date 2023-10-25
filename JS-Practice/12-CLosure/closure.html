@@ -6,9 +6,57 @@
     <title>Closures</title>
 </head>
 <body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
     
 </body>
 <script>
+    //lexical scope :  inner functions have the access to the outer function properties , closure : when we return the function the whole scope is returned inner as well as outer functions i.e lexical scope is returned
+    function outer(){
+        let username = "Zaid Fayaz"
+        function inner(){
+            let test = 123;
+            console.log(`Inner : ${username}`);
+        }
+        function innerTwo(){
+            console.log(`Inner Two :${username}`);
+           // console.log(`Test :${test}`);   //ReferenceError: test is not defined
+
+        }
+        inner()
+        innerTwo()
+    }
+    outer()
+
+    //closure 
+    function makeFunc(){
+        let name = "Zaid Fayaz"
+        function displayName(){
+            console.log(`Inner : ${name}`);
+        }
+      return displayName;
+    }
+    const myFunc = makeFunc();
+    myFunc()
     
+</script>
+<script>
+    const button = document.getElementById('orange')
+    const button2 = document.getElementById('green')
+
+    // button.onclick = function(){
+    //     document.body.style.backgroundColor = 'orange'
+    // }
+    // button2.onclick = function(){
+    //     document.body.style.backgroundColor = 'green'
+    // }
+
+    function clickHandler(color){
+        return function(){
+        document.body.style.backgroundColor = `${color}`
+    }
+    }
+    button.onclick = clickHandler('orange')
+    button2.onclick = clickHandler('green')
 </script>
 </html>
