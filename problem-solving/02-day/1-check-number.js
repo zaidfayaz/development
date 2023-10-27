@@ -12,3 +12,5 @@ function checkNumber(num1, num2){
 console.log(checkNumber(30, 70))
 
 //using same problem by arrow function
+const isNumberEqualTo100 = (num1, num2) => num1 === 100 || num2 === 100 || (num1 + num2) === 100 
+console.log(isNumberEqualTo100(0, 0));
