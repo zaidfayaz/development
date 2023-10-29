@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion</title>
+</head>
+<body>
+    <h1>Convert Km into Miles</h1>
+    <input type="number"  id="input-number"> Kms
+    <button id="convert">Convert into Miles</button>
+    <h2 id ="result"></h2>
+    
+</body>
+  <script>
+    convert.addEventListener('click', function conversion(){
+        let kms = document.querySelector("#input-number").value
+        // console.log(kms);
+         const factor = 0.621371
+         let miles = kms * factor
+         //console.log(miles);
+         document.getElementById("result").innerText = `${kms}km = ${miles} miles`;
+    })
+
+  </script>
+</html>
