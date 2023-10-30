@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion</title>
+</head>
+<body> 
+    <h1>Conversion of Celsius into Farenheit</h1>
+    <input type="number" id="input-number" placeholder="Celsius"><br>
+    <button id="convert" style="margin: 5px 0;">Convert into farenheit</button>
+    <h2 id="result"></h2>
+</body>
+<script>
+   let button = document.getElementById("convert")
+    button.addEventListener('click', function(){
+       let celsius = document.getElementById("input-number").value;
+       let farenheit = (celsius * 1.8) + 32
+       document.getElementById("result").innerText = `${celsius} C =  ${farenheit} F`
+    })
+</script>
+</html>
