@@ -7,13 +7,25 @@
 </head>
 <body>
     <h1>Check Whether the number is Positive or Negative or Zero</h1>
-    <input type="number" id="input-text">
+    <input type="text" id="input-text">
     <button id="btn-chk">Check</button>
+    <h2 id="result"></h2>
     
 </body>
 <script>
-  let data = document.getElementById("input-type").value
-  let btn = document.getElementById("btn-check")
-  btn.addEventListener('click')
+  let btn = document.getElementById("btn-chk")
+  btn.addEventListener('click', function(){
+    let data = document.getElementById("input-text").value
+    // result = Math.sign(data)
+    if (data > 0){
+        document.getElementById('result').innerText = `${data} is Positive Number`;
+    }else if (data < 0){
+        document.getElementById('result').innerHTML = `${data} is Negative Number`;
+    }else if ( data == 0){
+        document.getElementById('result').innerHTML = `${data} is Zero`;
+    }else{
+        document.getElementById('result').innerHTML = `${data} is is Not a valid Number`;
+    }
+  })
 </script>
 </html>
