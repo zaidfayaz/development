@@ -6,19 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Check Whether the number is Positive or Negative</h1>
+    <h1>Check Whether the number is Positive or Negative or Zero</h1>
+    <input type="number" id="input-text">
+    <button id="btn-chk">Check</button>
     
 </body>
 <script>
-    function num(num){
-        console.log(typeof num);
-        if (num > 0){
-            console.log(`The number ${num} Positive`);
-        }else{
-            console.log(`The number ${num} Negative `);
-        }
-    }
-    num(23)
-    num(-34)
+  let data = document.getElementById("input-type").value
+  let btn = document.getElementById("btn-check")
+  btn.addEventListener('click')
 </script>
 </html>
