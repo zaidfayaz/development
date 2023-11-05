@@ -7,6 +7,5 @@ const largestNumber = (num1, num2, num3) =>{
     }else{
         console.log(`${num3} is largest`);
     }
-
 }
 largestNumber(62, 55, 65)
