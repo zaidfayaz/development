@@ -1,13 +1,14 @@
+let number = 5
 let fact = 1;
-const factorialRecursion =(num) =>{
-    if (num > num){
-        return `The factorial of ${num} is 1`
+ function factorialRecursion(n){
+    if (n > number){
+        return
     }
-    fact = fact * num;
+    fact = fact * n;
     console.log(fact);
-    fact++;
-    factorialRecursion()
+    n++;
+    factorialRecursion(n);
 }
 
-
-console.log(factorialRecursion(5));
+factorialRecursion(5);
+console.log(`${number} is ${fact}`);
