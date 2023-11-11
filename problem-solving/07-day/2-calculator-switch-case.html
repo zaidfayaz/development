@@ -11,10 +11,11 @@
 <script>
     let num1 = prompt('Please enter the ist number')
     let num2 =prompt("Please enter the second number")
-    let opr = prompt("Select among +, -, *, /")
+    let opr = prompt("Select among +, -, *, /");
+    let result;
     switch(opr){
         case "+":
-            let result = parseInt(num1) + parseInt(num2);
+            result = parseInt(num1) + parseInt(num2);
             console.log(`${num1} + ${num2} = ${result}`);
             break;
         case "-":
