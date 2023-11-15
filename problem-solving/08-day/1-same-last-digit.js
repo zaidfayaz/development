@@ -11,6 +11,6 @@ function checkLastDigit(num1, num2, num3){
         console.log(`${num1}, ${num2}, ${num3} are not having the same last digits`);
     }
 }
-checkLastDigit(11, 21, 101)
-checkLastDigit(23, 45, 56)
-checkLastDigit(234332432, 657574532, 43356532)
+checkLastDigit(11, 21, 101);
+checkLastDigit(23, 45, 56);
+checkLastDigit(234332432, 657574532, 43356532);
