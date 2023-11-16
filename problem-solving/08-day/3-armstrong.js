@@ -8,7 +8,11 @@ function armstrongNumber(num){
         temp = parseInt(temp / 10)
 
     }
-    if ()
+    if (sum == num){
+        console.log(`${num} is a armstromg number`);
+    }else{
+        console.log(`${num} is not a armstrong number`);
+    }
 
 }
-armstrongNumber()
+armstrongNumber(122)
