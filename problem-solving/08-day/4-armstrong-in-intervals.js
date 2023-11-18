@@ -17,4 +17,4 @@ function armstrong(num1, num2){
 
 }
 armstrong(1, 1000)
-armstrong(1, 2000)
+armstrong(1, 1500)
