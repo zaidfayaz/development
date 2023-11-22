@@ -8,3 +8,4 @@ function naturalSum(num){
     }
 }
 console.log(naturalSum(5));
+console.log(naturalSum(5));
