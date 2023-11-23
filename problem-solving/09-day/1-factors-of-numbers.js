@@ -10,3 +10,4 @@ const factorNumber = (num)=>{
     }
 }
 factorNumber(12)
+factorNumber(23)
