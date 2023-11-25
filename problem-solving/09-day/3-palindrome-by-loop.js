@@ -11,3 +11,4 @@ const palindrome = (str)=>{
 
 }
 palindrome("racecar")
+palindrome("madam")
