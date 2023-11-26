@@ -19,3 +19,4 @@ const swapNumbers = (num1, num2) => {
     console.log(`After swapping : The value of num1 = ${num1} and the value of num2 = ${num2}`);
 }
 swapNumbers(5,9)
+swapNumbers(15, 76)
