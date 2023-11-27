@@ -78,4 +78,4 @@ getAllUsers()
 //Above  approach by thenable
 fetch('https://api.github.com/users/zaidfayaz').then((response) => {
     return response.json()
-}).then((data) => console.log(data)).catch((error) => console.log(error));
+}).then((data) => console.log(data)).catch((error) => console.log(error));  
